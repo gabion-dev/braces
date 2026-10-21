@@ -1,3 +1,27 @@
+# @gabion/braces
+
+[braces](https://github.com/micromatch/braces) 3.0.3 by Jon Schlinkert with one change: a nesting depth limit that closes [GHSA-vfj7-8cjw-p6xm](https://github.com/advisories/GHSA-vfj7-8cjw-p6xm). The advisory covers braces through 3.0.3, the latest release, and names no patched version.
+
+- A pattern nested deeper than 100 braces or parentheses throws a `SyntaxError` (`Input nesting depth (101), exceeds max depth (100)`) before the recursive walkers run, the way a pattern longer than `maxLength` already does.
+- An AST passed directly to `.compile`, `.expand` or `.stringify` that is nested deeper than 100 blocks, or cyclic, throws a `RangeError`.
+- Below the limit the code paths are those of 3.0.3: the change adds the two checks and nothing else (compare with tag `3.0.3` of this repository).
+
+Use it in place of `braces` wherever it sits in the dependency tree:
+
+```json
+{
+  "overrides": {
+    "braces": "npm:@gabion/braces@^3.0.4"
+  }
+}
+```
+
+Every release is published from this repository by GitHub Actions with a provenance attestation.
+
+The README of braces 3.0.3 follows unchanged.
+
+---
+
 # braces [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=W8YFZ425KND68) [![NPM version](https://img.shields.io/npm/v/braces.svg?style=flat)](https://www.npmjs.com/package/braces) [![NPM monthly downloads](https://img.shields.io/npm/dm/braces.svg?style=flat)](https://npmjs.org/package/braces) [![NPM total downloads](https://img.shields.io/npm/dt/braces.svg?style=flat)](https://npmjs.org/package/braces) [![Linux Build Status](https://img.shields.io/travis/micromatch/braces.svg?style=flat&label=Travis)](https://travis-ci.org/micromatch/braces)
 
 > Bash-like brace expansion, implemented in JavaScript. Safer than other brace expansion libs, with complete support for the Bash 4.3 braces specification, without sacrificing speed.
