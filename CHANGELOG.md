@@ -32,6 +32,10 @@ Changelog entries are classified using the following labels _(from [keep-a-chang
 
 </details>
 
+## [3.0.5] - 2026-10-21
+
+The code of 3.0.4, unchanged. The first release published through trusted publishing: staged by GitHub Actions and approved by a maintainer.
+
 ## [3.0.4] - 2026-10-21
 
 Published as `@gabion/braces`.

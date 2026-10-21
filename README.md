@@ -11,7 +11,7 @@ Use it in place of `braces` wherever it sits in the dependency tree:
 ```json
 {
   "overrides": {
-    "braces": "npm:@gabion/braces@^3.0.4"
+    "braces": "npm:@gabion/braces@^3.0.5"
   }
 }
 ```

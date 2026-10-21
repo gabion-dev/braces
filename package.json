@@ -1,7 +1,7 @@
 {
   "name": "@gabion/braces",
   "description": "braces 3.0.3 with a brace/parenthesis nesting depth limit (GHSA-vfj7-8cjw-p6xm): a drop-in replacement through npm overrides, identical output for every pattern within the limit.",
-  "version": "3.0.4",
+  "version": "3.0.5",
   "homepage": "https://github.com/gabion-dev/braces",
   "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
   "contributors": [
